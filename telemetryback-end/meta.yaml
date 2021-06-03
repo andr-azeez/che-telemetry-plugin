@@ -12,7 +12,7 @@ spec:
     - name: CHE_WORKSPACE_TELEMETRY_BACKEND_PORT
       value: '4167'
   containers:
-  - name: Telemetry Container
+  - name: its_telemetry_container
     image: docker.io/andrazeez/telemetry-plugin-test
     env:
       - name: CHE_API
