@@ -1,9 +1,9 @@
 apiVersion: v2
-publisher: telemetry-plugin-publisher
-name: little-telemetry-backend
+publisher: telemetry-plugin-publisher-dummy
+name: little-telemetry-backend-dummy
 version: 0.0.1
 type: Che Plugin
-displayName: Little Telemetry Backend
-description: A Demo telemetry backend
-title: Little Telemetry Backend
+displayName: Little Telemetry Backend dummy
+description: A Demo telemetry backend dummy
+title: Little Telemetry Backend dummy
 category: Other
