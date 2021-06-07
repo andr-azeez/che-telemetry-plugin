@@ -6,7 +6,7 @@ http://maven.apache.org/xsd/settings-1.0.0.xsd">
       <server>
          <id>che-incubator</id>
          <username>andr-azeez</username>
-         <password>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</password>
+         <password>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</password>
       </server>
    </servers>
 
