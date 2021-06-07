@@ -13,7 +13,7 @@ spec:
       value: '4167'
   containers:
   - name: itstelemetrycontainer
-    image: docker.io/andrazeez/telemetry-plugin-test:v8
+    image: docker.io/andrazeez/telemetry-plugin-test:v9
     env:
       - name: CHE_API
         value: $(CHE_API_INTERNAL)
