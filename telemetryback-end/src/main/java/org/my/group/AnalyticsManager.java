@@ -61,12 +61,27 @@ public class AnalyticsManager extends AbstractAnalyticsManager {
         // TODO Auto-generated method stub
         System.out.println("*************");
         System.out.println(ownerId);
+        System.out.println("*************____start");
+        System.out.println("*************____33");
+        
+        HashMap<String, Object> eventPayload = new HashMap<String, Object>(properties);
+        System.out.println("*************____33");
+
+        eventPayload.put("event", event);
+        System.out.println(event);
+        System.out.println("*************____44");
+        
         HttpClient httpClient = HttpClientBuilder.create().build();
+        System.out.println("*************____11");
+
         // HttpClient httpClient = HttpClients.createDefault();
     HttpPost httpPost = new HttpPost("http://teletest.lc.cl-labs.springpeople.com/event");
-    HashMap<String, Object> eventPayload = new HashMap<String, Object>(properties);
-    eventPayload.put("event", event);
+        System.out.println("*************____22");
+
+    
+
     System.out.println("-0-0-0-0-0-0-0-0");
+
     System.out.println(eventPayload);
     JSONObject jobj = new JSONObject(eventPayload);
     System.out.println("*******9999999");
