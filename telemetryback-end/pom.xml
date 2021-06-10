@@ -33,11 +33,11 @@
   
   
 
-    <!-- <dependency>
+    <dependency>
         <groupId>commons-logging</groupId>
         <artifactId>commons-logging</artifactId>
         <version>1.2</version>
-    </dependency> -->
+    </dependency> 
     <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>servlet-api</artifactId>
@@ -185,6 +185,7 @@
       </build>
       <properties>
         <quarkus.package.type>native</quarkus.package.type>
+        <quarkus.native.additional-build-args>-J-Djavax.net.ssl.trustStore=/projects/console-java-simple/telemetryback-end/ssl-libs/cacerts,-H:DynamicProxyConfigurationResources=dynamic-proxies.json,--enable-all-security-services</quarkus.native.additional-build-args>
       </properties>
     </profile>
   </profiles>
