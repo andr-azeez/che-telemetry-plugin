@@ -1,0 +1,25 @@
+apiVersion: v2
+publisher: eclipse
+name: che-workspace-telemetry-woopra-plugin
+version: 0.0.1
+type: Che Plugin
+displayName: Woopra Telemetry Plugin
+description: Telemetry plugin to send information to Woopra
+title: Che Workspace Telemetry Woopra Plugin
+category: Other
+spec:
+  workspaceEnv:
+    - name: CHE_WORKSPACE_TELEMETRY_BACKEND_PORT
+      value: '4167'
+  containers:
+    - name: che-workspace-telemetry-woopra-plugin
+      image: quay.io/eclipse/che-workspace-telemetry-woopra-plugin:latest
+      env:
+        - name: WOOPRA_DOMAIN
+          value: 'log.lc.cl-labs.springpeople.com'
+        - name: SEGMENT_WRITE_KEY
+          value: 'OgDMKYXs42dV1ORznYuAQybKVs8h7gSM'
+        - name: WOOPRA_DOMAIN_ENDPOINT
+          value: $(CHE_API_INTERNAL)/fabric8-che-analytics/woopra-domain
+        - name: SEGMENT_WRITE_KEY_ENDPOINT
+          value: $(CHE_API_INTERNAL)/fabric8-che-analytics/segment-write-key
