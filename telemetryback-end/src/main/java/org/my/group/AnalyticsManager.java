@@ -117,6 +117,8 @@ public class AnalyticsManager extends AbstractAnalyticsManager {
 
         try{
 
+            DriverManager.getDrivers();
+
             conn = DriverManager.getConnection(
                 "jdbc:postgresql://13.233.70.170:5432/che_telemetry","telemetry_user","SpringTelemetry123");
             
@@ -126,15 +128,19 @@ public class AnalyticsManager extends AbstractAnalyticsManager {
                 String sql = "insert into che_logs(log_type,log_data,user_id) values('"+event+"','"+jsonmsg+"','"+ownerId+"')";
                 // sql = "INSERT INTO che_logs VALUES (101, 'Mahnaz', 'Fatma', 25)";
          stmt.executeUpdate(sql);
-                System.out.println("Connected to the database!");
+                System.out.println("^^^^^^^^^^^^^^^^ Connected to the database!");
             } else {
-                System.out.println("Failed to make connection!");
+                System.out.println("^^^^^^^^^^^^^^^^ Failed to make connection!");
             }
 
         } catch (SQLException e) {
             System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
+            System.out.println("^^^^^^^^^^^^^^^^ SQLException");
+
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("^^^^^^^^^^^^^^^^ Exception");
+
         }
         finally {
     // if (rs != null) {

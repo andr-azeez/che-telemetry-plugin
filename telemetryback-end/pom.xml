@@ -44,12 +44,16 @@
         <version>2.5</version>
         <scope>provided</scope>
     </dependency>
-    <dependency>
+    <!-- <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.2.14</version>
-    </dependency>
-
+    </dependency> -->
+     <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-jdbc-postgresql</artifactId>
+            <version>${quarkus.platform.version}</version>
+        </dependency>
     
     <dependency>
         <groupId>log4j</groupId>
