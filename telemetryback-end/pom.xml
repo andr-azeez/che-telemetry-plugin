@@ -38,24 +38,32 @@
         <artifactId>commons-logging</artifactId>
         <version>1.2</version>
     </dependency> 
-    <dependency>
+    <!-- <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>servlet-api</artifactId>
         <version>2.5</version>
         <scope>provided</scope>
-    </dependency>
-    <!-- <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.2.14</version>
     </dependency> -->
-     <dependency>
+     <!-- <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-jdbc-postgresql</artifactId>
             <version>${quarkus.platform.version}</version>
+        </dependency> -->
+     <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-jdbc-mysql</artifactId>
+            <version>${quarkus.platform.version}</version>
         </dependency>
-    
+
+
     <dependency>
+        <groupId>org.eclipse.che.incubator.workspace-telemetry</groupId>
+        <artifactId>backend-base</artifactId>
+        <version>0.0.25</version>
+    </dependency>
+
+    
+    <!-- <dependency>
         <groupId>log4j</groupId>
         <artifactId>log4j</artifactId>
         <version>1.2.17</version>
@@ -66,11 +74,7 @@
         <version>2.0</version>
     </dependency>
 
-    <dependency>
-        <groupId>org.eclipse.che.incubator.workspace-telemetry</groupId>
-        <artifactId>backend-base</artifactId>
-        <version>0.0.25</version>
-    </dependency>
+    
     <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpclient</artifactId>
@@ -80,7 +84,7 @@
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpmime</artifactId>
         <version>4.5.1</version>
-    </dependency>
+    </dependency> -->
     <dependency>
         <groupId>org.json</groupId>
         <artifactId>json</artifactId>
@@ -97,16 +101,16 @@
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-resteasy</artifactId>
     </dependency>
-    <dependency>
+    <!-- <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-junit5</artifactId>
       <scope>test</scope>
-    </dependency>
-    <dependency>
+    </dependency> -->
+    <!-- <dependency>
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
       <scope>test</scope>
-    </dependency>
+    </dependency> -->
   </dependencies>
   <build>
     <plugins>
