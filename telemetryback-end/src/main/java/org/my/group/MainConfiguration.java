@@ -10,6 +10,7 @@ import org.eclipse.che.incubator.workspace.telemetry.base.BaseConfiguration;
 public class MainConfiguration extends BaseConfiguration {
     @Produces
     public AbstractAnalyticsManager analyticsManager() {
+    
       return new AnalyticsManager(apiEndpoint, workspaceId, machineToken, requestFactory());
 
     }
