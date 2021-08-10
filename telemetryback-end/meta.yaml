@@ -18,3 +18,9 @@ spec:
     env:
       - name: CHE_API
         value: $(CHE_API_INTERNAL)
+      - name: EDX_BASE_URL
+        value: "https://learn-dev.springpeople.com/oauth2/access_token"
+      - name: EDX_CLIENT_SECRET
+        value: "4uU5hi11xV8h4R4EURNuVAHA32Zg2GwqxPaZfhPf93u2rJgRFCV9K8YxlWr8FC1TrOlrUQlDceszsR2ghPjoF1z9JxBZesJjhUnJ87dItb1gbNFWXLlqZu65TbxFBfpA"
+      - name: EDX_CLIENT_ID
+        value: "login-api"
